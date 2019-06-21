@@ -4,19 +4,40 @@
     <screen></screen>
     <qr-code></qr-code>
     <qr-code></qr-code>
-    <screen></screen>
-    <qr-code></qr-code>
-    <qr-code></qr-code>
-    <qr-code></qr-code>
+    <bind></bind>
+    <cargo-way></cargo-way>
+    <lock></lock>
+    <light></light>
+    <camera></camera>
+    <gravity></gravity>
+    <cold></cold>
+    <result></result>
   </div>
 </template>
 
 <script>
 import screen from "components/detect-ins/screen";
 import qrCode from "components/detect-ins/qrCode";
+import bind from "components/detect-ins/bind";
+import net from "components/detect-ins/net";
+import cargoWay from "components/detect-ins/cargoWay";
+import lock from "components/detect-ins/lock";
+import light from "components/detect-ins/light";
+import camera from "components/detect-ins/camera";
+import gravity from "components/detect-ins/gravity";
+import cold from "components/detect-ins/cold";
+import result from "components/detect-ins/result";
 export default {
   name: "app",
-  components: { screen, qrCode, qrCode, qrCode, qrCode, qrCode, }
+  components: { screen, qrCode, bind, net, cargoWay, lock, light, camera, gravity, cold, result},
+  data(){
+    insList: []
+  },
+  methods: {
+    passAll(){
+      wx.miniProgram.navigateBack()
+    }
+  }
 };
 </script>
 
