@@ -5,10 +5,22 @@
 </template>
 
 <script>
+import request from '../../utils/request'
 import cell from 'components/cell.vue'
 export default {
   name: 'app',
-  components: { cell }
+  components: { cell },
+  methods: {
+    getTestData(){
+      request({
+        url: "/api/",
+        method: "post",
+        params: { id: 1222}
+      }).then(res => {
+
+      })
+    }
+  }
 }
 </script>
 
