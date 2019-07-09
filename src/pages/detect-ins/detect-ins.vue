@@ -29,13 +29,27 @@ import cold from "components/detect-ins/cold";
 import result from "components/detect-ins/result";
 export default {
   name: "app",
-  components: { screen, qrCode, bind, net, cargoWay, lock, light, camera, gravity, cold, result},
-  data(){
-    insList: []
+  components: {
+    screen,
+    qrCode,
+    bind,
+    net,
+    cargoWay,
+    lock,
+    light,
+    camera,
+    gravity,
+    cold,
+    result
+  },
+  data() {
+    return {
+      insList: []
+    };
   },
   methods: {
-    passAll(){
-      wx.miniProgram.navigateBack()
+    passAll() {
+      wx.miniProgram.navigateBack();
     }
   }
 };
@@ -47,27 +61,27 @@ export default {
   margin-left: 40px;
   margin-right: 40px;
 }
-.ins-tip{
+.ins-tip {
   font-size: 14px;
   color: #777777;
 }
 .hor-center {
   text-align: center;
 }
-.ins-img{
+.ins-img {
   width: 100%;
 }
-.between-flex{
+.between-flex {
   display: flex;
   justify-content: space-between;
 }
-.box-49{
+.box-49 {
   width: 49%;
 }
-.margin-b-30{
+.margin-b-30 {
   margin-bottom: 30px;
 }
-.part{
+.part {
   margin-bottom: 80px;
 }
 </style>
